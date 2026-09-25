@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentti — Encontre empresas no mapa e comece a vender</title>
+  <meta name="description"
+    content="Veja no mapa todas as empresas ativas de uma região, filtre por setor e porte, descubra site, Instagram e WhatsApp com prova de cada contato e planeje a rota de visitas. Dados da Receita Federal atualizados todo mês.">
+  <link rel="canonical" href="https://www.agentti.ia.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.agentti.ia.br/">
+  <meta property="og:title" content="Agentti — Encontre empresas no mapa e comece a vender">
+  <meta property="og:description"
+    content="28 milhões de empresas ativas no mapa, com filtros comerciais, contatos com prova e rota de visitas.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="#planos" class="nav-link">Planos</a></li>
+        <li><a href="#duvidas" class="nav-link">Dúvidas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <span class="hero-badge-pulse"></span>
+          <span>Teste grátis por 7 dias, sem cartão</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        Encontre as empresas certas <br>
+        <span class="text-gradient">no mapa</span> e comece a vender
+      </h1>
+
+      <p class="hero-description">
+        Marque a região que sua equipe atende e veja todas as empresas ativas ali, com endereço, telefone e
+        e-mail da Receita Federal. O Agentti encontra o site, o Instagram e o WhatsApp de cada uma, mostra a
+        prova de cada contato e monta a rota de visitas.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary btn-lg">
+          <span>Criar conta grátis</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#planos" class="btn btn-secondary btn-lg">
+          <span>Ver planos</span>
+        </a>
+      </div>
+
+      <!-- Exemplo real da base -->
+      <div class="showcase-wrapper">
+        <div class="showcase-frame">
+          <div class="showcase-topbar">
+            <div class="showcase-dots">
+              <span class="showcase-dot red"></span>
+              <span class="showcase-dot yellow"></span>
+              <span class="showcase-dot green"></span>
+            </div>
+            <div class="showcase-url">app.agentti.ia.br</div>
+            <div></div>
+          </div>
+
+          <div class="showcase-content">
+            <div class="radar-grid"></div>
+            <div class="radar-sweep"></div>
+
+            <div class="showcase-overlay-card">
+              <div class="showcase-header">
+                <div>
+                  <h4 style="font-size: 1.1rem; font-weight: 700;">Oficinas mecânicas em Campinas/SP</h4>
+                  <p class="showcase-cnae">Manutenção e reparação mecânica de veículos</p>
+                </div>
+                <div class="showcase-badge-live">Dados reais</div>
+              </div>
+
+              <div class="showcase-stats-row">
+                <div class="showcase-stat-box">
+                  <div class="showcase-stat-val text-gradient">2.274</div>
+                  <div class="showcase-stat-lbl">Empresas ativas</div>
+                </div>
+                <div class="showcase-stat-box">
+                  <div class="showcase-stat-val text-gradient-blue">2.212</div>
+                  <div class="showcase-stat-lbl">Com telefone</div>
+                </div>
+                <div class="showcase-stat-box">
+                  <div class="showcase-stat-val">2.036</div>
+                  <div class="showcase-stat-lbl">Com endereço preciso</div>
+                </div>
+              </div>
+
+              <div class="showcase-chips">
+                <span class="showcase-chip highlight">Matriz e filiais</span>
+                <span class="showcase-chip">Porte e capital social</span>
+                <span class="showcase-chip">Sócios</span>
+                <span class="showcase-chip">Rota de visitas</span>
+              </div>
+
+              <p class="showcase-note">Contagem da base em setembro de 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NÚMEROS DA BASE ==================== -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-number text-gradient" data-counter-target="28.3" data-counter-decimals="1"
+            data-counter-suffix=" mi">28,3 mi</div>
+          <div class="metric-label">Empresas ativas</div>
+          <div class="metric-desc">Todo o Brasil, atualizado todo mês com a Receita Federal</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number text-gradient-blue" data-counter-target="99.7" data-counter-decimals="1"
+            data-counter-suffix="%">99,7%</div>
+          <div class="metric-label">Localizadas no mapa</div>
+          <div class="metric-desc">72% com endereço no nível da rua ou do número</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number text-gradient" data-counter-target="97" data-counter-suffix="%">97%</div>
+          <div class="metric-label">Com telefone</div>
+          <div class="metric-desc">Telefone informado no cadastro da empresa</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number" data-counter-target="90" data-counter-suffix="%">90%</div>
+          <div class="metric-label">Com e-mail</div>
+          <div class="metric-desc">E-mail informado no cadastro da empresa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMO FUNCIONA ==================== -->
+  <section class="steps-section" id="como-funciona">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Como funciona</div>
+        <h2 class="section-title">Da região no mapa à conversa com o cliente</h2>
+        <p class="section-desc">Três passos, sem planilha comprada e sem lista desatualizada.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">Passo 1</div>
+          <h3 class="step-title">Marque a região</h3>
+          <p class="step-text">Desenhe uma área no mapa, trace um raio a partir de um endereço ou siga o trajeto de
+            uma rodovia. Vale para um bairro, uma cidade ou uma região inteira.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">Passo 2</div>
+          <h3 class="step-title">Escolha quem interessa</h3>
+          <p class="step-text">Filtre pelo ramo de atividade (padarias, clínicas, transportadoras, oficinas…), porte,
+            capital social e matriz ou filial. Você vê na hora quantas empresas atendem ao filtro.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">Passo 3</div>
+          <h3 class="step-title">Qualifique e aborde</h3>
+          <p class="step-text">O Agentti procura o site, o Instagram e o WhatsApp de cada empresa, prepara as
+            mensagens e organiza a rota de visitas. Você revisa e envia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTATO COM PROVA ==================== -->
+  <section class="proof-section">
+    <div class="container">
+      <div class="proof-box">
+        <div>
+          <div class="section-subtitle">Contatos confiáveis</div>
+          <h2 class="section-title">Cada contato vem com a prova de onde foi encontrado</h2>
+          <p class="section-desc">O sistema visita o site e as redes sociais de cada empresa. Um contato só é
+            marcado como <strong>confirmado</strong> quando a página mostra o endereço ou o telefone que a empresa
+            registrou na Receita. Quando há indícios, mas não prova, ele aparece como <strong>provável</strong>.
+            Nada é inventado para preencher a ficha.</p>
+        </div>
+
+        <ul class="proof-list" aria-label="Exemplo de ficha qualificada">
+          <li class="proof-item">
+            <div>Site<small>Endereço da Receita na página de contato</small></div>
+            <span class="seal seal-ok">Confirmado</span>
+          </li>
+          <li class="proof-item">
+            <div>WhatsApp<small>Mesmo número do cadastro da empresa</small></div>
+            <span class="seal seal-ok">Confirmado</span>
+          </li>
+          <li class="proof-item">
+            <div>Instagram<small>Nome e cidade batem, sem telefone na bio</small></div>
+            <span class="seal seal-maybe">Provável</span>
+          </li>
+          <li class="proof-item">
+            <div>Facebook<small>Nenhuma página da empresa encontrada</small></div>
+            <span class="seal seal-none">Não encontrado</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECURSOS ==================== -->
+  <section class="features-section" id="recursos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Recursos</div>
+        <h2 class="section-title">Tudo o que a equipe comercial precisa num lugar só</h2>
+      </div>
+
+      <div class="features-grid three">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Todas as empresas da região</h3>
+          <p class="feature-text">Veja cada empresa no mapa, colorida por porte, setor ou matriz e filial. O mapa de
+            calor mostra onde o seu público se concentra.</p>
+        </div>
+
+        <div class="feature-card blue">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-title">Filtros comerciais</h3>
+          <p class="feature-text">Ramo de atividade principal ou secundário, porte, capital social, sócios e
+            administradores. Combine filtros até chegar exatamente em quem compra de você.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <circle cx="6" cy="19" r="3"></circle>
+              <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path>
+              <circle cx="18" cy="5" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="feature-title">Rota de visitas</h3>
+          <p class="feature-text">Escolha as empresas e receba a melhor ordem de visita, com o trajeto no mapa. Menos
+            quilômetros rodados e mais visitas por dia.</p>
+        </div>
+
+        <div class="feature-card blue">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Abordagem assistida</h3>
+          <p class="feature-text">Mensagens para WhatsApp, Instagram e e-mail escritas a partir da sua oferta. A
+            extensão do Chrome abre a conversa, você revisa e envia, e o sistema registra quem já foi contatado.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">E-mail verificado antes do envio</h3>
+          <p class="feature-text">Confira se o endereço existe antes de mandar a proposta, sem enviar nenhuma
+            mensagem de teste. Menos devolução e mais chance de cair na caixa de entrada.</p>
+        </div>
+
+        <div class="feature-card blue">
+          <div class="feature-icon-wrap">
+            <svg class="line" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Mapas para apresentar</h3>
+          <p class="feature-text">Exporte o mapa da região em alta resolução, com legenda e ranking dos setores.
+            Pronto para a reunião com a diretoria ou para o plano de expansão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PARA QUEM ==================== -->
+  <section class="audience-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Para quem é</div>
+        <h2 class="section-title">Feito para quem vende para empresas</h2>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3 class="audience-title">Representantes e distribuidores</h3>
+          <p class="audience-text">Descubra todos os clientes possíveis do seu território e visite na ordem certa.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-title">Franquias e expansão</h3>
+          <p class="audience-text">Veja onde estão os concorrentes e os bairros com mais empresas do seu público.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-title">Agências e consultorias</h3>
+          <p class="audience-text">Monte listas de prospecção por nicho e cidade para você ou para seus clientes.</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-title">Serviços para empresas</h3>
+          <p class="audience-text">Contabilidade, TI, manutenção, segurança: encontre quem precisa do seu serviço
+            perto de você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PLANOS ==================== -->
+  <section class="pricing-section" id="planos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Planos</div>
+        <h2 class="section-title">Escolha o tamanho da sua operação</h2>
+        <p class="section-desc">Todos os planos têm o mapa, os filtros, a rota de visitas e a exportação para
+          planilha. Muda o volume de empresas por mês.</p>
+      </div>
+
+      <div class="free-strip">
+        <p><strong>Teste grátis por 7 dias:</strong> 150 empresas no mapa e 30 qualificações, sem cartão.</p>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-secondary">Começar o teste</a>
+      </div>
+
+      <div class="pricing-switcher-wrap">
+        <span class="pricing-switch-label" id="label-billing-monthly"
+          style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">Mensal</span>
+        <label class="pricing-switch" title="Alternar entre pagamento mensal e anual">
+          <input type="checkbox" id="pricing-billing-toggle">
+          <span class="pricing-slider"></span>
+        </label>
+        <span class="pricing-switch-label" id="label-billing-annual"
+          style="font-size: 0.95rem; font-weight: 500; color: var(--text-dim); display: flex; align-items: center; gap: 8px;">
+          Anual
+          <span class="badge"
+            style="background: rgba(230, 81, 0, 0.2); color: #FF9800; border: 1px solid rgba(230, 81, 0, 0.45); font-size: 11px; padding: 3px 10px; border-radius: 12px; font-weight: 700;">Economize
+            até 34%</span>
+        </span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div>
+            <h3 class="pricing-plan-name">Starter</h3>
+            <p class="pricing-plan-desc">Para representantes, consultores e pequenas empresas.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-currency">R$</span>
+              <span class="pricing-amount" data-amount-monthly="147" data-amount-annual="97">147</span>
+              <span class="pricing-period">/mês</span>
+            </div>
+            <div class="pricing-billing-hint" data-billing-hint
+              data-hint-monthly="Sem fidelidade • Cancele quando quiser"
+              data-hint-annual="Cobrado uma vez por ano (R$ 1.164) • Economia de R$ 600"
+              style="font-size: 11.5px; min-height: 18px; color: var(--text-dim);">Sem fidelidade • Cancele quando
+              quiser</div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>5.000</strong> empresas no mapa por mês</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>500</strong> empresas qualificadas (site, redes e WhatsApp)</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>1.000</strong> e-mails verificados</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>250</strong> mensagens de abordagem</span></li>
+            </ul>
+          </div>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-secondary pricing-cta">Começar agora</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="pricing-card featured">
+          <span class="pricing-badge">Recomendado</span>
+          <div>
+            <h3 class="pricing-plan-name">Pro</h3>
+            <p class="pricing-plan-desc">Para equipes de vendas que prospectam todos os dias.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-currency">R$</span>
+              <span class="pricing-amount" data-amount-monthly="347" data-amount-annual="247">347</span>
+              <span class="pricing-period">/mês</span>
+            </div>
+            <div class="pricing-billing-hint" data-billing-hint
+              data-hint-monthly="Sem fidelidade • Cancele quando quiser"
+              data-hint-annual="Cobrado uma vez por ano (R$ 2.964) • Economia de R$ 1.200"
+              style="font-size: 11.5px; min-height: 18px; color: #ffb74d;">Sem fidelidade • Cancele quando quiser
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>25.000</strong> empresas no mapa por mês</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>2.500</strong> empresas qualificadas (site, redes e WhatsApp)</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>5.000</strong> e-mails verificados</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>1.500</strong> mensagens de abordagem</span></li>
+            </ul>
+          </div>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary pricing-cta">Começar agora</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div>
+            <h3 class="pricing-plan-name">Enterprise</h3>
+            <p class="pricing-plan-desc">Para indústrias, redes de franquia e equipes de campo grandes.</p>
+            <div class="pricing-price-wrap">
+              <span class="pricing-amount" style="font-size: 2.2rem;">Sob consulta</span>
+            </div>
+            <div class="pricing-billing-hint" style="font-size: 11.5px; min-height: 18px; color: var(--text-dim);">
+              Volume e condições definidos em contrato</div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>100.000</strong> empresas no mapa por mês</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>15.000</strong> empresas qualificadas</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>30.000</strong> e-mails verificados</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>10.000</strong> mensagens de abordagem</span></li>
+              <li class="pricing-feature-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Implantação acompanhada pela nossa equipe</span></li>
+            </ul>
+          </div>
+          <a href="mailto:contato@agentti.ia.br?subject=Plano%20Enterprise" class="btn btn-secondary pricing-cta">Falar
+            com a equipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DÚVIDAS ==================== -->
+  <section class="faq-section" id="duvidas">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Dúvidas frequentes</div>
+        <h2 class="section-title">Perguntas antes de começar</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>De onde vêm os dados das empresas?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Do cadastro de CNPJ que a Receita Federal publica como dado aberto. A base é atualizada todo mês e
+              mostra apenas empresas ativas. Site, Instagram e WhatsApp vêm da qualificação, e cada um aparece com a
+              página onde foi encontrado.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>As empresas aparecem no lugar certo do mapa?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              99,7% das empresas estão no mapa, e 72% delas com endereço no nível da rua ou do número. As demais são
+              posicionadas pelo CEP ou pelo bairro. Na hora de planejar visitas, você pode filtrar só as empresas com
+              endereço preciso.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Preciso instalar alguma coisa?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Não para usar o mapa, os filtros e as listas: tudo funciona no navegador, inclusive no celular. Para a
+              qualificação e para a abordagem assistida, instale a extensão do Agentti no Chrome e entre com o mesmo
+              e-mail e senha da plataforma.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Consigo levar as empresas para a minha planilha ou CRM?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. As listas podem ser exportadas em Excel e CSV, com os filtros que você aplicou, prontas para
+              importar no seu CRM.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Posso usar com a minha equipe?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. Sua empresa tem uma conta própria, com projetos separados e usuários com níveis de acesso:
+              administrador, operador e somente leitura. Nenhuma outra empresa vê os seus dados.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>E a LGPD?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Os dados cadastrais de empresas são públicos e publicados pela própria Receita Federal. Na abordagem,
+              siga as boas práticas: identifique a sua empresa, fale do que é relevante para o negócio do contato e
+              respeite quem pedir para não ser mais procurado.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA FINAL ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-box-title">Descubra quantos clientes existem na sua região</h2>
+        <p class="cta-box-desc">Crie a conta, marque a área no mapa e veja a resposta em segundos. O teste é grátis
+          por 7 dias.</p>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary btn-lg">
+          <span>Criar conta grátis</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RODAPÉ ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="#planos" class="footer-link">Planos</a></li>
+            <li><a href="#duvidas" class="footer-link">Dúvidas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>
