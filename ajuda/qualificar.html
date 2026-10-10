@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Qualificar empresas — Ajuda do Agentti</title>
+  <meta name="description" content="O que a qualificação procura, quanto tempo leva, a opção &quot;A fundo&quot; e como acompanhar a fila.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/qualificar">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/qualificar">
+  <meta property="og:title" content="Qualificar empresas — Ajuda do Agentti">
+  <meta property="og:description" content="O que a qualificação procura, quanto tempo leva, a opção &quot;A fundo&quot; e como acompanhar a fila.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › Qualificar empresas</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>Qualificar empresas</h1>
+        <p class="ajuda-resumo">O que a qualificação procura, quanto tempo leva, a opção &quot;A fundo&quot; e como acompanhar a fila.</p>
+        <p>Qualificar é descobrir <strong>como falar com a empresa</strong> e <strong>se ela vale a pena</strong>. O Agentti procura na internet, como uma pessoa faria, e guarda só o que confirmou ser daquela empresa.</p>
+<h3 id="o-que-e-procurado">O que é procurado</h3>
+<ul><li><strong>Site</strong> da empresa (e não um guia ou catálogo com várias empresas).</li><li><strong>Instagram</strong> e <strong>Facebook</strong> da empresa.</li><li><strong>WhatsApp</strong>, telefones e e-mails.</li><li>A ficha no <strong>Google Maps</strong>: nota, número de avaliações, categoria e horário.</li></ul>
+<p>Cada achado fica marcado como <em>confirmado</em> ou <em>provável</em>, com o motivo. A empresa ganha uma <strong>nota</strong> de 0 a 100 pelos canais confirmados: site (até 25), WhatsApp ou telefone (até 35), e-mail (até 20) e redes (até 20). A partir de 60 ela é <strong>quente</strong>; de 30 a 59, <strong>morna</strong>.</p>
+<h3 id="como-qualificar">Como qualificar</h3>
+<ol><li>Na página <a href="https://app.agentti.ia.br/app/leads">Leads</a>, marque as empresas.</li><li>Clique em <strong>Qualificar selecionados</strong>. Confira o resumo (quantas, o tempo e o custo) e confirme.</li><li>Acompanhe na aba <strong>Fila</strong>. O andamento também aparece no alto da tela (&quot;Fila 47%&quot;).</li></ol>
+<p>Leva cerca de <strong>11 segundos por empresa</strong>, com duas empresas ao mesmo tempo.</p>
+<h3 id="a-fundo">A fundo</h3>
+<p>Marque <strong>A fundo</strong> para o Agentti também entrar no site e ler &quot;Quem somos&quot;, produtos, serviços e unidades, além dos destaques do Instagram e de notícias. Leva cerca de <strong>1 minuto a mais por empresa com site</strong>. O resultado vira um <strong>dossiê</strong> na ficha do lead, com a fonte de cada informação, e o resumo da empresa é escrito só a partir dele.</p>
+<h3 id="fila-pausada">Fila pausada</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/fila-claro.webp" alt="Na aba Fila, a pausada aparece em amarelo, com os botões de retomar e parar" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/fila-escuro.webp" alt="Na aba Fila, a pausada aparece em amarelo, com os botões de retomar e parar" loading="lazy"><figcaption>Na aba Fila, a pausada aparece em amarelo, com os botões de retomar e parar</figcaption></figure>
+<p>A fila para sozinha quando não pode continuar, e o motivo aparece no indicador amarelo do alto da tela e na aba Fila:</p>
+<table><thead><tr><th>Motivo</th><th>O que fazer</th></tr></thead><tbody><tr><td>Extensão desconectada</td><td>Abra o Chrome do Agentti, confira a extensão e clique em <strong>Retomar</strong></td></tr><tr><td>Teto do dia atingido</td><td>Retome no dia seguinte (veja <a href="/ajuda/cotas-e-limites">Cotas e limites</a>)</td></tr><tr><td>Cota de qualificação esgotada</td><td>Aumente o plano ou espere o próximo mês</td></tr><tr><td>A aba saiu da busca</td><td>Você mexeu na janela do Chrome do Agentti; clique em <strong>Retomar</strong></td></tr></tbody></table>
+<div class="ajuda-nota"><p>A qualificação roda no <strong>Chrome do Agentti</strong>, no seu computador. Deixe a janela dele atrás das outras, <strong>sem minimizar</strong> (veja <a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a>).</p></div>
+<h3 id="privacidade">Privacidade</h3>
+<p>Quando a empresa é um MEI sem nome fantasia, o nome dela é o nome de uma pessoa. Nesse caso o Agentti <strong>não abre</strong> perfis de redes sociais achados só por esse nome, para não guardar dados de um homônimo. Perfis recusados não são guardados: fica só o motivo.</p>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa">Mapa</a></li>
+<li><a href="/ajuda/qualificar" aria-current="page">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/leads">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>

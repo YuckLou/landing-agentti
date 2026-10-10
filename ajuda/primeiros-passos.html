@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Primeiros passos — Ajuda do Agentti</title>
+  <meta name="description" content="O caminho do Agentti em quatro passos: oferta, achar empresas, qualificar e abordar.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/primeiros-passos">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/primeiros-passos">
+  <meta property="og:title" content="Primeiros passos — Ajuda do Agentti">
+  <meta property="og:description" content="O caminho do Agentti em quatro passos: oferta, achar empresas, qualificar e abordar.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › Primeiros passos</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>Primeiros passos</h1>
+        <p class="ajuda-resumo">O caminho do Agentti em quatro passos: oferta, achar empresas, qualificar e abordar.</p>
+        <p>O Agentti encontra empresas para você vender, descobre como falar com cada uma e ajuda a escrever a primeira mensagem. Tudo acontece dentro de um <strong>projeto</strong>: uma prospecção com a sua oferta, a sua região e as empresas que você escolheu.</p>
+<h3 id="o-caminho">O caminho</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/inicio-claro.webp" alt="A página Início: o próximo passo em destaque e o caminho do projeto" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/inicio-escuro.webp" alt="A página Início: o próximo passo em destaque e o caminho do projeto" loading="lazy"><figcaption>A página Início: o próximo passo em destaque e o caminho do projeto</figcaption></figure>
+<ol><li><strong>Defina a oferta.</strong> Diga o que você vende, para quem e por que comprariam de você. A nota de cada empresa e as mensagens usam isso.</li><li><strong>Encontre empresas.</strong> No <a href="https://app.agentti.ia.br/app/map">Mapa</a> você escolhe a área; em <a href="https://app.agentti.ia.br/app/cnpj">Buscar empresas</a> você filtra a base da Receita Federal por atividade e cidade. Também dá para achar empresas que só aparecem no Google e no Apple Maps (veja <a href="/ajuda/descoberta-na-web">Descoberta na web</a>).</li><li><strong>Qualifique.</strong> O Agentti procura na internet o site, o Instagram, o WhatsApp e os telefones de cada empresa e dá uma nota (veja <a href="/ajuda/qualificar">Qualificar empresas</a>).</li><li><strong>Aborde.</strong> Gere a mensagem certa para cada empresa, pelo canal que ela tem (veja <a href="/ajuda/abordagem">Abordagem</a>).</li></ol>
+<p>A página <a href="https://app.agentti.ia.br/app/inicio">Início</a> mostra em que passo o projeto está e o que fazer em seguida.</p>
+<h3 id="criar-um-projeto">Criar um projeto</h3>
+<p>Em <strong>Resultados → Projetos</strong>, clique em <strong>Novo Projeto</strong>. Dê um nome, escolha a cidade e o estado (o mapa abre lá) e salve. Depois, em <strong>Editar</strong> (no cartão do projeto ou na Início), preencha a oferta.</p>
+<p>Cada cartão mostra a cidade, a oferta, quantas empresas o projeto tem e quantas já foram qualificadas. <strong>Usar este projeto</strong> troca para ele; em <strong>⋯</strong> ficam relatórios, duplicar, baixar uma cópia e mover para a lixeira.</p>
+<div class="ajuda-nota"><p>Trabalhe com um projeto por prospecção: &quot;Padarias de Jundiaí&quot; e &quot;Oficinas de Campinas&quot; ficam separados, cada um com as suas empresas, filas e relatórios.</p></div>
+<h3 id="trocar-de-projeto">Trocar de projeto</h3>
+<p>O projeto ativo aparece no alto da tela, ao lado do seu nome. Clique nele para trocar. Tudo o que você vê (mapa, lista, filas, relatórios) é do projeto ativo.</p>
+<h3 id="no-celular">No celular</h3>
+<p>No celular o Agentti abre o <strong>radar</strong>: um mapa com as empresas perto de você. Veja <a href="/ajuda/app-do-celular">App do celular</a>.</p>
+<h3 id="ajuda-em-cada-pagina">Ajuda em cada página</h3>
+<p>O botão <strong>?</strong> no alto à direita (ou a tecla <strong>F1</strong>) abre ao lado o artigo da página em que você está, com uma busca: pergunte do seu jeito, como <em>&quot;a fila parou&quot;</em>. A <a href="/ajuda">central de ajuda</a> tem todos os artigos.</p>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/ajuda-painel-claro.webp" alt="O botão ? abre a ajuda da página ao lado" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/ajuda-painel-escuro.webp" alt="O botão ? abre a ajuda da página ao lado" loading="lazy"><figcaption>O botão ? abre a ajuda da página ao lado</figcaption></figure>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos" aria-current="page">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa">Mapa</a></li>
+<li><a href="/ajuda/qualificar">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/leads">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>

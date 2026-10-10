@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Mapa — Ajuda do Agentti</title>
+  <meta name="description" content="Ver as empresas do projeto no mapa, desenhar áreas e capturar empresas de uma região.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/mapa">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/mapa">
+  <meta property="og:title" content="Mapa — Ajuda do Agentti">
+  <meta property="og:description" content="Ver as empresas do projeto no mapa, desenhar áreas e capturar empresas de uma região.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › Mapa</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>Mapa</h1>
+        <p class="ajuda-resumo">Ver as empresas do projeto no mapa, desenhar áreas e capturar empresas de uma região.</p>
+        <p>O <a href="https://app.agentti.ia.br/app/map">Mapa</a> mostra as empresas do projeto e permite escolher <strong>onde</strong> prospectar.</p>
+<h3 id="as-cores-das-empresas">As cores das empresas</h3>
+<p>Como no Google Maps, cada pino tem duas cores:</p>
+<ul><li><strong>O miolo é a atividade:</strong> laranja para comida e bebida (padaria, restaurante, café), azul para compras, vermelho para saúde, rosa para beleza, cinza-azulado para veículos, roxo para hospedagem, ciano para lazer e esporte, cinza para serviços e escritórios, marrom para indústria e atacado, verde para agro.</li><li><strong>O anel em volta é o grupo:</strong> os filtros no alto do mapa mostram o anel de cada um, com a contagem.</li></ul>
+<table><thead><tr><th>Grupo</th><th>O que é</th></tr></thead><tbody><tr><td><strong>Descobertos</strong></td><td>vieram da base da Receita e ainda não foram qualificados (anel azul-escuro)</td></tr><tr><td><strong>WEB</strong></td><td>foram achados no Google Maps ou no Apple Maps (anel preto; veja <a href="/ajuda/descoberta-na-web">Descoberta na web</a>)</td></tr><tr><td><strong>Qualificados</strong></td><td>o Agentti já procurou site, redes e contatos (anel dourado e uma estrelinha no canto)</td></tr></tbody></table>
+<p>Os mesmos filtros existem na página Leads.</p>
+<h3 id="aproximar-o-mapa">Aproximar o mapa</h3>
+<p>O mapa mostra mais conforme você aproxima:</p>
+<ul><li><strong>De longe:</strong> cada empresa é um ponto.</li><li><strong>Rua a rua (zoom 15):</strong> o ponto vira um círculo com o ícone da atividade (padaria, restaurante, farmácia, oficina...).</li><li><strong>Mais perto (zoom 17 em diante):</strong> o nome da empresa aparece ao lado. Onde há muitas juntas, sai o nome das que cabem, as qualificadas primeiro; aproxime mais para ver as outras.</li></ul>
+<h3 id="ver-uma-empresa">Ver uma empresa</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/mapa-cartao-claro.webp" alt="Clique no pino: o cartão da empresa abre à direita, com os botões de ação e tudo dela" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/mapa-cartao-escuro.webp" alt="Clique no pino: o cartão da empresa abre à direita, com os botões de ação e tudo dela" loading="lazy"><figcaption>Clique no pino: o cartão da empresa abre à direita, com os botões de ação e tudo dela</figcaption></figure>
+<ul><li><strong>Passe o mouse</strong> sobre o pino para ver o nome e a atividade.</li><li><strong>Clique no pino</strong> (ou na empresa da lista à esquerda) para abrir o cartão à direita, com tudo dela: endereço, telefones, e-mails, site e redes, dados da Receita, a qualificação canal por canal, o que ela posta no Instagram, os sócios, a mensagem sugerida e as telas que a qualificação viu. Role o cartão para ver tudo.</li><li>No alto do cartão: <strong>Rota</strong>, <strong>Ligar</strong>, <strong>WhatsApp</strong>, <strong>Site</strong>, <strong>Instagram</strong>, <strong>Selecionar</strong> (marca para a fila) e <strong>Ficha</strong> (a página completa do lead). <strong>Esc</strong> ou o <strong>X</strong> fecham.</li><li>Para marcar várias para a fila direto no mapa, segure <strong>Ctrl</strong> (ou <strong>Shift</strong>) e clique nos pinos.</li></ul>
+<h3 id="a-lista-e-os-filtros">A lista e os filtros</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/mapa-claro.webp" alt="O mapa do projeto: à esquerda, a lista do que está na tela; em cima do mapa, os filtros" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/mapa-escuro.webp" alt="O mapa do projeto: à esquerda, a lista do que está na tela; em cima do mapa, os filtros" loading="lazy"><figcaption>O mapa do projeto: à esquerda, a lista do que está na tela; em cima do mapa, os filtros</figcaption></figure>
+<ul><li>A lista da esquerda mostra <strong>as empresas da parte do mapa que está na tela</strong>. Arraste ou aproxime o mapa e ela acompanha. Role a lista para ver mais. As qualificadas vêm primeiro.</li><li>Os <strong>filtros ficam em cima do mapa</strong>, como no Google Maps: <strong>Atividade</strong>, <strong>Porte</strong>, <strong>Matriz ou filial</strong>, <strong>WhatsApp</strong>, <strong>Site</strong> e <strong>Telefone</strong>. Filtro ligado fica azul e vale em qualquer zoom. <strong>Limpar filtros</strong> mostra tudo de novo.</li><li>A <strong>busca no alto do painel</strong> entende o que você digita: um <strong>endereço</strong> ou <strong>bairro</strong> leva o mapa até lá (e <strong>Usar como área</strong> cria a área), o <strong>nome</strong> de uma empresa abre o cartão dela, uma <strong>atividade</strong> liga o filtro, e <strong>Mostrar só as empresas com “...”</strong> filtra o mapa e a lista pelo texto.</li><li>O <strong>+</strong> de cada linha põe a empresa na fila de qualificação.</li></ul>
+<h3 id="buscar-empresas-novas">Buscar empresas novas</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/mapa-busca-claro.webp" alt="Buscar empresas nesta área: o que, onde e de onde" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/mapa-busca-escuro.webp" alt="Buscar empresas nesta área: o que, onde e de onde" loading="lazy"><figcaption>Buscar empresas nesta área: o que, onde e de onde</figcaption></figure>
+<ol><li>Clique em <strong>Buscar empresas nesta área</strong>.</li><li><strong>Que tipo de empresa:</strong> as atividades do projeto já vêm escolhidas. Dá para procurar outra.</li><li><strong>Onde:</strong> a parte do mapa que está na tela, a área escolhida (desenhada, uma cidade, um bairro) ou a faixa da rota. Para usar uma cidade e as vizinhas, clique com o botão direito no mapa.</li><li><strong>Onde procurar:</strong> na <strong>base da Receita</strong> (empresas com CNPJ, em segundos), no <strong>Google e Apple Maps</strong> (o que aparece nos mapas, pelo Chrome do Agentti; veja <a href="/ajuda/descoberta-na-web">Descoberta na web</a>) ou <strong>nos dois</strong>.</li><li>Em <strong>Mais opções da Receita</strong> ficam porte, capital, matriz ou filial e a quantidade máxima. Por padrão a busca traz quem tem a atividade como <strong>principal</strong>; marque <strong>Incluir quem tem a atividade só como secundária</strong> para trazer também, por exemplo, o supermercado que vende pão.</li><li>Antes de buscar, a janela mostra <strong>quantas empresas a Receita tem ali</strong>, <strong>quantas já estão no projeto</strong> e <strong>quantas entram novas</strong>. Só as novas contam na cota, e o botão diz o número: <strong>Buscar e trazer 272</strong>.</li></ol>
+<p>Quando a busca usa a parte do mapa na tela, essa parte vira uma área do projeto (&quot;Tela de 09/10 19:15&quot;), para você achar depois na aba Áreas. Essas escolhas não filtram o mapa; para filtrar, use as etiquetas em cima dele.</p>
+<h3 id="areas">Áreas</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/mapa-areas-claro.webp" alt="A aba Áreas: a área escolhida mostra quantas empresas há na Receita, por porte" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/mapa-areas-escuro.webp" alt="A aba Áreas: a área escolhida mostra quantas empresas há na Receita, por porte" loading="lazy"><figcaption>A aba Áreas: a área escolhida mostra quantas empresas há na Receita, por porte</figcaption></figure>
+<p>Na aba <strong>Áreas</strong> ficam as regiões do projeto: cidades, bairros e áreas desenhadas.</p>
+<ul><li><strong>Nova área:</strong> desenhe <strong>à mão</strong>, um <strong>retângulo</strong> ou um <strong>círculo</strong>, ou procure um <strong>bairro ou cidade</strong>. Com o botão direito numa cidade do mapa dá para usar ela <strong>e as vizinhas</strong>, ou a <strong>região metropolitana</strong>.</li><li><strong>Clique numa área</strong> para ver quantas empresas do projeto estão nela (e quantas já foram qualificadas) e, na hora, quantas empresas com a atividade do projeto existem nela na Receita, por porte, com celular e filiais. Isso não gasta cota.</li><li>No cartão da área:</li><li><strong>Buscar empresas aqui</strong> abre a busca já com essa área;</li><li><strong>Mapa de calor</strong> pinta as ruas com mais empresas;</li><li><strong>Ajustar</strong> deixa arrastar os pontos da forma;</li><li><strong>Renomear</strong> e <strong>Apagar</strong>.</li><li>Apagar uma área tira do projeto as empresas que entraram <strong>só por ela</strong> e ainda não foram qualificadas. As qualificadas e as que outra área também cobre ficam.</li></ul>
+<h3 id="botao-direito">Botão direito</h3>
+<ul><li><strong>Numa empresa:</strong> abrir o cartão, marcar para a fila, usar como saída, chegada ou parada da rota, copiar os dados.</li><li><strong>Numa área:</strong> ver os números, buscar empresas aqui, ajustar a forma, apagar.</li><li><strong>Em qualquer ponto:</strong> usar o bairro, a cidade, a cidade e as vizinhas, a região metropolitana ou um círculo de 1, 2 ou 5 km como área; sair, chegar ou parar ali na rota.</li></ul>
+<h3 id="marcar-varias-empresas">Marcar várias empresas</h3>
+<p>Em <strong>Selecionar</strong>, na barra de cima do mapa, escolha marcar com um <strong>retângulo</strong>, um <strong>laço</strong> ou um <strong>círculo</strong>, ou <strong>todas as que estão na tela</strong>. Com as empresas marcadas, a barra que aparece permite <strong>Qualificar</strong>, <strong>Criar rota</strong> e <strong>Exportar</strong>. Para marcar uma a uma, segure <strong>Ctrl</strong> (ou <strong>Shift</strong>) e clique nos pinos.</p>
+<h3 id="camadas">Camadas</h3>
+<p>O botão <strong>Camadas</strong>, no canto de cima à direita, escolhe o <strong>fundo do mapa</strong> (mapa, escuro, cinza ou satélite), a <strong>cor dos pinos</strong> (pela atividade, que é o padrão, ou por matriz/filial, porte, capital ou origem) e o <strong>tamanho dos pinos</strong>. No satélite, ele também liga e desliga os nomes de ruas e cidades.</p>
+<p>A barra de cima tem ainda <strong>Desenhar área</strong>, <strong>Medir</strong> (clique nos pontos e dois cliques no último), <strong>Ver tudo</strong> (enquadra as empresas do projeto) e <strong>Baixar imagem</strong> (o mapa em imagem ou PDF, ou <strong>Enviar ao assistente</strong>, para ele pôr esse mapa num <a href="/ajuda/relatorios">relatório</a>).</p>
+<h3 id="rota">Rota</h3>
+<p>Na aba <strong>Rota</strong>, marque a <strong>saída</strong> e a <strong>chegada</strong>: a rota aparece sozinha, e muda quando você troca um ponto ou põe uma parada no meio (botão <strong>+</strong>). As empresas até a distância escolhida do caminho ficam destacadas. <strong>Melhor ordem</strong> organiza as paradas, <strong>No celular</strong> abre a rota no Google Maps e <strong>Salvar</strong> guarda a rota em <strong>Rotas salvas</strong>. Pontos salvos e anotações ficam em <strong>Mais</strong>.</p>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa" aria-current="page">Mapa</a></li>
+<li><a href="/ajuda/qualificar">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/leads">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>

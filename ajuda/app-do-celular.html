@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>App do celular (radar) — Ajuda do Agentti</title>
+  <meta name="description" content="O mapa com as empresas perto de você, com filtros, ficha e rota, no celular.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/app-do-celular">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/app-do-celular">
+  <meta property="og:title" content="App do celular (radar) — Ajuda do Agentti">
+  <meta property="og:description" content="O mapa com as empresas perto de você, com filtros, ficha e rota, no celular.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › App do celular (radar)</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>App do celular (radar)</h1>
+        <p class="ajuda-resumo">O mapa com as empresas perto de você, com filtros, ficha e rota, no celular.</p>
+        <p>No celular, o Agentti abre o <strong>radar</strong>: um mapa com as empresas perto de você, no jeito do Google Maps. É para quem está na rua visitando clientes.</p>
+<h3 id="usar">Usar</h3>
+<figure class="ajuda-print ajuda-print-celular"><img class="ajuda-print-claro" src="/assets/ajuda/celular-claro.webp" alt="O radar no celular: raio, atividade, grupos e a lista das empresas por perto" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/celular-escuro.webp" alt="O radar no celular: raio, atividade, grupos e a lista das empresas por perto" loading="lazy"><figcaption>O radar no celular: raio, atividade, grupos e a lista das empresas por perto</figcaption></figure>
+<ol><li>Abra <strong>app.agentti.ia.br</strong> no celular e entre. Permita a <strong>localização</strong> quando o navegador pedir.</li><li>O mapa mostra você (ponto azul), o raio e as empresas do projeto ativo, com as cores do painel: o miolo do pino é a atividade e o anel é o grupo. Aproximando, aparecem o ícone da atividade e o nome da empresa.</li><li>Embaixo fica a lista, da mais perto para a mais longe. Arraste para cima para ver mais.</li><li>Toque numa empresa para abrir a ficha: <strong>Como chegar</strong> (abre o app de mapas do celular), <strong>Ligar</strong>, <strong>WhatsApp</strong>, <strong>Instagram</strong> e <strong>site</strong>.</li></ol>
+<h3 id="filtros">Filtros</h3>
+<ul><li><strong>Raio:</strong> de 500 m a 5 km.</li><li><strong>Atividade:</strong> escreva &quot;padaria&quot;, &quot;oficina&quot; e escolha.</li><li><strong>Todos, Qualificados, Descobertos, Web:</strong> os grupos do projeto.</li><li><strong>Fora do projeto:</strong> as empresas da base da Receita ali perto que ainda não estão no projeto (escolha a atividade antes). Na ficha delas aparece <strong>Salvar no projeto</strong>, que pede confirmação porque usa a cota.</li></ul>
+<p>Moveu o mapa? Toque em <strong>Buscar nesta área</strong>.</p>
+<h3 id="o-que-fica-no-computador">O que fica no computador</h3>
+<p>No celular ficam o radar e a ficha. Qualificar, relatórios, abordagem e configurações estão na <strong>versão completa</strong> (menu ☰ do radar). Num computador, o radar abre pelo menu da sua conta → <strong>App do celular</strong>.</p>
+<h3 id="colocar-na-tela-inicial">Colocar na tela inicial</h3>
+<p>No Chrome do Android: menu ⋮ → <strong>Adicionar à tela inicial</strong>. No iPhone (Safari): compartilhar → <strong>Adicionar à Tela de Início</strong>.</p>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa">Mapa</a></li>
+<li><a href="/ajuda/qualificar">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/leads">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular" aria-current="page">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Leads (as empresas do projeto) — Ajuda do Agentti</title>
+  <meta name="description" content="A lista das empresas do projeto, os filtros, a ficha de cada uma e a exportação.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/leads">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/leads">
+  <meta property="og:title" content="Leads (as empresas do projeto) — Ajuda do Agentti">
+  <meta property="og:description" content="A lista das empresas do projeto, os filtros, a ficha de cada uma e a exportação.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › Leads (as empresas do projeto)</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>Leads (as empresas do projeto)</h1>
+        <p class="ajuda-resumo">A lista das empresas do projeto, os filtros, a ficha de cada uma e a exportação.</p>
+        <p>A página <a href="https://app.agentti.ia.br/app/leads">Leads</a> é a lista de todas as empresas do projeto ativo.</p>
+<h3 id="filtrar">Filtrar</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/leads-claro.webp" alt="A lista de leads com os grupos Todos, Descobertos, WEB e Qualificados" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/leads-escuro.webp" alt="A lista de leads com os grupos Todos, Descobertos, WEB e Qualificados" loading="lazy"><figcaption>A lista de leads com os grupos Todos, Descobertos, WEB e Qualificados</figcaption></figure>
+<ul><li><strong>Todos, Descobertos, WEB e Qualificados</strong>: os mesmos grupos e cores do mapa.</li><li>Nome, CNPJ, atividade, estado e município nos campos de cima; mais opções em <strong>Filtros avançados</strong>.</li><li><strong>Agrupar matriz e filiais</strong> junta as unidades da mesma empresa numa linha (<strong>Ver as unidades</strong> abre as outras).</li></ul>
+<h3 id="a-ficha-da-empresa">A ficha da empresa</h3>
+<p>Clique numa empresa para ver tudo: dados da Receita (sócios, porte, abertura), os contatos achados e de onde veio cada um, a nota, o dossiê (quando qualificada <strong>a fundo</strong>) e os rascunhos de mensagem.</p>
+<h3 id="acoes">Ações</h3>
+<p>Marque as empresas na lista (a caixa do cabeçalho marca a página toda) e use:</p>
+<ul><li><strong>Qualificar selecionados</strong>, o botão azul: põe as marcadas na fila (veja <a href="/ajuda/qualificar">Qualificar empresas</a>).</li><li><strong>Mais ações</strong>:</li><li><strong>Marcar como qualificadas</strong>: para quando você mesmo já conferiu a empresa.</li><li><strong>Verificar e-mails</strong>: confere se os e-mails existem, sem enviar nada.</li><li><strong>Abordar pelo painel da extensão</strong>: as marcadas vão para o painel lateral da extensão, para contatar uma a uma.</li><li><strong>Baixar a lista</strong>: planilha (CSV) ou JSON, com os filtros da tela.</li><li><strong>Juntar repetidas</strong>: junta empresas repetidas no projeto.</li></ul>
+<p><strong>Colunas</strong> escolhe o que aparece na tabela; <strong>Limpar filtros</strong> volta tudo ao padrão.</p>
+<h3 id="a-aba-fila">A aba Fila</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/fila-claro.webp" alt="A aba Fila: cada fila com situação, progresso e resultado" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/fila-escuro.webp" alt="A aba Fila: cada fila com situação, progresso e resultado" loading="lazy"><figcaption>A aba Fila: cada fila com situação, progresso e resultado</figcaption></figure>
+<p>Mostra as filas do projeto: andando, pausadas (com o motivo), concluídas. Em <strong>Itens e detalhes</strong> você vê empresa por empresa; em <strong>Falhas</strong>, as que deram erro e por quê.</p>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa">Mapa</a></li>
+<li><a href="/ajuda/qualificar">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/leads" aria-current="page">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>

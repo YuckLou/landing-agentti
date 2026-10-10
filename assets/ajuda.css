@@ -1,0 +1,59 @@
+/* Central de ajuda pública (gerado por scripts/gerar_ajuda_publica.py no repositório do app). */
+.ajuda-pub { padding-top: 110px; padding-bottom: 72px; }
+.ajuda-trilha { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 18px; }
+.ajuda-trilha a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+.ajuda-topo h1 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 10px; }
+.ajuda-topo p { color: var(--text-muted); max-width: 680px; margin: 0 0 24px; font-size: 1.05rem; }
+.ajuda-busca { width: 100%; max-width: 560px; padding: 14px 18px; border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-main); font-size: 1rem; }
+.ajuda-busca:focus { outline: 2px solid var(--accent-orange); outline-offset: 2px; }
+.ajuda-cartoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 28px; }
+.ajuda-cartao { display: block; padding: 20px; border-radius: var(--radius-md); background: var(--bg-card);
+  border: 1px solid var(--border-subtle); color: var(--text-main); text-decoration: none; transition: var(--transition-fast); }
+.ajuda-cartao:hover, .ajuda-cartao:focus-visible { border-color: var(--accent-orange); transform: translateY(-2px); }
+.ajuda-cartao h2 { font-family: var(--font-heading); font-size: 1.15rem; margin: 0 0 6px; }
+.ajuda-cartao p { color: var(--text-muted); margin: 0; font-size: 0.95rem; line-height: 1.5; }
+.ajuda-oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ajuda-vazio { color: var(--text-muted); margin-top: 24px; }
+.ajuda-grade { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 56px; align-items: start; }
+.ajuda-lateral { position: sticky; top: 100px; font-size: 0.92rem; }
+.ajuda-lateral h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); margin: 0 0 10px; }
+.ajuda-lateral ul { list-style: none; padding: 0; margin: 0; }
+.ajuda-lateral a { display: block; padding: 6px 10px; border-radius: var(--radius-sm); color: var(--text-muted); text-decoration: none; }
+.ajuda-lateral a:hover { color: var(--text-main); background: var(--bg-surface); }
+.ajuda-lateral a[aria-current="page"] { color: var(--accent-orange); background: var(--bg-surface); font-weight: 600; }
+.ajuda-artigo { max-width: 780px; line-height: 1.7; font-size: 1.02rem; }
+.ajuda-artigo h1 { font-family: var(--font-heading); font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: 0 0 8px; line-height: 1.2; }
+.ajuda-artigo .ajuda-resumo { color: var(--text-muted); font-size: 1.1rem; margin: 0 0 28px; }
+.ajuda-artigo h2 { font-family: var(--font-heading); font-size: 1.5rem; margin: 40px 0 12px; scroll-margin-top: 100px; }
+.ajuda-artigo h3, .ajuda-artigo h4 { font-size: 1.15rem; margin: 28px 0 10px; scroll-margin-top: 100px; }
+.ajuda-artigo a { color: var(--accent-orange); text-underline-offset: 3px; }
+.ajuda-artigo code { background: var(--bg-surface); padding: 2px 6px; border-radius: 6px; font-size: 0.9em; }
+.ajuda-artigo pre { background: var(--bg-surface); padding: 14px; border-radius: var(--radius-sm); overflow-x: auto; }
+.ajuda-artigo ul, .ajuda-artigo ol { padding-left: 1.4em; }
+.ajuda-artigo li { margin: 4px 0; }
+.ajuda-artigo table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; display: block; overflow-x: auto; }
+.ajuda-artigo th, .ajuda-artigo td { border: 1px solid var(--border-subtle); padding: 8px 10px; text-align: left; vertical-align: top; }
+.ajuda-artigo th { background: var(--bg-surface); }
+.ajuda-nota { border-left: 4px solid var(--accent-orange); background: var(--bg-surface); padding: 12px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 16px 0; }
+.ajuda-nota p { margin: 0; }
+.ajuda-print { margin: 20px 0 24px; }
+.ajuda-print img { width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: block; }
+.ajuda-print-celular img { max-width: 340px; }
+.ajuda-print figcaption { color: var(--text-dim); font-size: 0.88rem; margin-top: 8px; }
+.ajuda-print-claro { display: none !important; }
+[data-theme="light"] .ajuda-print-claro { display: block !important; }
+[data-theme="light"] .ajuda-print-escuro { display: none !important; }
+.ajuda-chamada { margin-top: 48px; padding: 24px; border-radius: var(--radius-md); background: var(--bg-card);
+  border: 1px solid var(--border-subtle); display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.ajuda-chamada p { margin: 0; color: var(--text-muted); }
+.ajuda-chamada strong { color: var(--text-main); display: block; font-size: 1.1rem; }
+@media (max-width: 900px) {
+  .ajuda-grade { grid-template-columns: 1fr; gap: 24px; }
+  .ajuda-lateral { position: static; order: 2; }
+}
+@media (max-width: 520px) {
+  .ajuda-pub { padding-top: 92px; }
+  .container.ajuda-pub { padding-left: 16px; padding-right: 16px; }
+}
