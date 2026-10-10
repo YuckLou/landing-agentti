@@ -64,4 +64,8 @@
     <loc>https://www.agentti.ia.br/ajuda/perguntas-frequentes</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.agentti.ia.br/ajuda/integracoes-api-e-webhooks</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
