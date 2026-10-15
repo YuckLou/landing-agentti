@@ -4,18 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentti — Encontre empresas no mapa e comece a vender</title>
+  <title>Agentti — CNPJ com IA: encontre empresas no mapa e comece a vender</title>
   <meta name="description"
-    content="Veja no mapa todas as empresas ativas de uma região, filtre por setor e porte, descubra site, Instagram e WhatsApp com prova de cada contato e planeje a rota de visitas. Dados da Receita Federal atualizados todo mês.">
+    content="Busque empresas por CNPJ, atividade (CNAE) e cidade com IA. Todas as empresas ativas do Brasil no mapa, com site, Instagram e WhatsApp com prova. Dados da Receita Federal atualizados todo mês.">
   <link rel="canonical" href="https://www.agentti.ia.br/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.agentti.ia.br/">
-  <meta property="og:title" content="Agentti — Encontre empresas no mapa e comece a vender">
+  <meta property="og:title" content="Agentti — CNPJ com IA: encontre empresas no mapa e comece a vender">
   <meta property="og:description"
     content="28 milhões de empresas ativas no mapa, com filtros comerciais, contatos com prova e rota de visitas.">
   <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
   <meta property="og:locale" content="pt_BR">
   <meta name="theme-color" content="#0f172a">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Agentti", "url": "https://www.agentti.ia.br/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "inLanguage": "pt-BR", "description": "CNPJ com IA: prospecção B2B sobre a base de CNPJ da Receita Federal, com as empresas no mapa e contatos com prova.", "offers": [{"@type": "Offer", "name": "Starter", "price": "147", "priceCurrency": "BRL"}, {"@type": "Offer", "name": "Pro", "price": "347", "priceCurrency": "BRL"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é CNPJ com IA?", "acceptedAnswer": {"@type": "Answer", "text": "É usar inteligência artificial sobre o cadastro de CNPJ da Receita Federal. No Agentti, você pede em português, como \"oficinas mecânicas em Campinas com WhatsApp\", e a IA escolhe as atividades (CNAE), conta as empresas, mostra no mapa, encontra site, Instagram e WhatsApp com prova e escreve a primeira mensagem."}}, {"@type": "Question", "name": "Como montar uma lista de empresas por atividade e cidade?", "acceptedAnswer": {"@type": "Answer", "text": "Escolha a atividade pelo nome ou pelo código CNAE, depois a cidade, a região ou um raio a partir de um endereço, e filtre por porte e capital social. A lista sai na hora, com endereço, telefone e e-mail da Receita, e pode ser exportada em Excel ou CSV."}}, {"@type": "Question", "name": "Dá para ver as empresas de cada CNPJ no mapa?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Cada CNPJ ativo aparece no endereço do cadastro, colorido pela atividade. Um clique abre a ficha da empresa, com os dados da Receita, os contatos encontrados e o entorno."}}, {"@type": "Question", "name": "De onde vêm os dados das empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Do cadastro de CNPJ que a Receita Federal publica como dado aberto. A base é atualizada todo mês e mostra apenas empresas ativas. Site, Instagram e WhatsApp vêm da qualificação, e cada um aparece com a página onde foi encontrado."}}, {"@type": "Question", "name": "As empresas aparecem no lugar certo do mapa?", "acceptedAnswer": {"@type": "Answer", "text": "99,7% das empresas estão no mapa, e 72% delas com endereço no nível da rua ou do número. As demais são posicionadas pelo CEP ou pelo bairro. Na hora de planejar visitas, você pode filtrar só as empresas com endereço preciso."}}, {"@type": "Question", "name": "Preciso instalar alguma coisa?", "acceptedAnswer": {"@type": "Answer", "text": "Não para usar o mapa, os filtros e as listas: tudo funciona no navegador, inclusive no celular. Para a qualificação e para a abordagem assistida, instale a extensão do Agentti no Chrome e entre com o mesmo e-mail e senha da plataforma."}}, {"@type": "Question", "name": "Consigo levar as empresas para a minha planilha ou CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. As listas podem ser exportadas em Excel e CSV, com os filtros que você aplicou, prontas para importar no seu CRM."}}, {"@type": "Question", "name": "Posso usar com a minha equipe?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Sua empresa tem uma conta própria, com projetos separados e usuários com níveis de acesso: administrador, operador e somente leitura. Nenhuma outra empresa vê os seus dados."}}, {"@type": "Question", "name": "E a LGPD?", "acceptedAnswer": {"@type": "Answer", "text": "Os dados cadastrais de empresas são públicos e publicados pela própria Receita Federal. Na abordagem, siga as boas práticas: identifique a sua empresa, fale do que é relevante para o negócio do contato e respeite quem pedir para não ser mais procurado."}}]}
+  </script>
 
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
@@ -113,14 +120,16 @@
         </div>
       </div>
 
+      <div class="section-subtitle hero-kicker">Prospecção com IA sobre a base de CNPJ da Receita Federal</div>
+
       <h1 class="hero-title">
         Encontre as empresas certas <br>
         <span class="text-gradient">no mapa</span> e comece a vender
       </h1>
 
       <p class="hero-description">
-        Marque a região que sua equipe atende e veja todas as empresas ativas ali, com endereço, telefone e
-        e-mail da Receita Federal. O Agentti encontra o site, o Instagram e o WhatsApp de cada uma, mostra a
+        Marque a região que sua equipe atende e monte a lista de empresas por atividade e cidade, com endereço,
+        telefone e e-mail da Receita Federal. O Agentti encontra o site, o Instagram e o WhatsApp de cada uma, mostra a
         prova de cada contato e monta a rota de visitas.
       </p>
 
@@ -415,8 +424,10 @@
   <section class="audience-section" id="assistente">
     <div class="container">
       <div class="section-header">
-        <div class="section-subtitle">Assistente de IA</div>
-        <h2 class="section-title">Prospecte conversando, no painel ou no seu Claude</h2>
+        <div class="section-subtitle">CNPJ agêntico</div>
+        <h2 class="section-title">Prospecção com IA: peça em português, no painel ou no seu Claude</h2>
+        <p class="section-desc">A IA trabalha sobre a base de CNPJ da Receita Federal: escolhe os ramos que compram o
+          seu produto, conta as empresas, acha os contatos com prova e escreve a abordagem. Você só decide.</p>
       </div>
 
       <div class="audience-grid">
@@ -588,6 +599,48 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" type="button">
+            <span>O que é CNPJ com IA?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              É usar inteligência artificial sobre o cadastro de CNPJ da Receita Federal. No Agentti, você pede em
+              português, como "oficinas mecânicas em Campinas com WhatsApp", e a IA escolhe as atividades (CNAE),
+              conta as empresas, mostra no mapa, encontra site, Instagram e WhatsApp com prova e escreve a primeira
+              mensagem.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Como montar uma lista de empresas por atividade e cidade?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Escolha a atividade pelo nome ou pelo código CNAE, depois a cidade, a região ou um raio a partir de um
+              endereço, e filtre por porte e capital social. A lista sai na hora, com endereço, telefone e e-mail da
+              Receita, e pode ser exportada em Excel ou CSV.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Dá para ver as empresas de cada CNPJ no mapa?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sim. Cada CNPJ ativo aparece no endereço do cadastro, colorido pela atividade. Um clique abre a ficha
+              da empresa, com os dados da Receita, os contatos encontrados e o entorno.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
             <span>De onde vêm os dados das empresas?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
@@ -701,7 +754,7 @@
             </div>
             <span>agentti</span>
           </a>
-          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+          <p class="footer-desc">Prospecção com IA: empresas no mapa, com dados da Receita e contatos com prova.</p>
         </div>
 
         <div>
