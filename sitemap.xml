@@ -80,4 +80,8 @@
     <loc>https://www.agentti.ia.br/ajuda/renda-do-entorno</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.agentti.ia.br/ajuda/plano-e-pagamento</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
