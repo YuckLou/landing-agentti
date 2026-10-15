@@ -33,6 +33,10 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://www.agentti.ia.br/ajuda/importar-planilha</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://www.agentti.ia.br/ajuda/leads</loc>
     <changefreq>monthly</changefreq>
   </url>
@@ -42,6 +46,10 @@
   </url>
   <url>
     <loc>https://www.agentti.ia.br/ajuda/relatorios</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.agentti.ia.br/ajuda/estatisticas</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -66,6 +74,10 @@
   </url>
   <url>
     <loc>https://www.agentti.ia.br/ajuda/integracoes-api-e-webhooks</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.agentti.ia.br/ajuda/renda-do-entorno</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

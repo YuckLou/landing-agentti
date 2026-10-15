@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Estatísticas — Ajuda do Agentti</title>
+  <meta name="description" content="Prancha com os números de uma área (Receita, IBGE, renda e trabalho), dados no mapa, comparação com a cidade e imagens para o relatório.">
+  <link rel="canonical" href="https://www.agentti.ia.br/ajuda/estatisticas">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.agentti.ia.br/ajuda/estatisticas">
+  <meta property="og:title" content="Estatísticas — Ajuda do Agentti">
+  <meta property="og:description" content="Prancha com os números de uma área (Receita, IBGE, renda e trabalho), dados no mapa, comparação com a cidade e imagens para o relatório.">
+  <meta property="og:image" content="https://www.agentti.ia.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/landing.css">
+
+  <!-- Tema aplicado antes da pintura para não piscar (padrão: automático) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('agentti_landing_theme') || 'auto';
+        var effective = stored;
+        if (stored === 'auto') {
+          effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-preference', stored);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/ajuda.css">
+</head>
+
+<body>
+  <!-- Gerado por scripts/gerar_ajuda_publica.py (repositório do app). Não edite à mão: edite src/ajuda/*.md. -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <img src="/assets/logo.png" alt="Agentti">
+        </div>
+        <span>agentti</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="/#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="/#planos" class="nav-link">Planos</a></li>
+        <li><a href="/#duvidas" class="nav-link">Dúvidas</a></li>
+        <li><a href="/ajuda" class="nav-link">Ajuda</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-switcher-control" id="theme-switcher-control" role="group" aria-label="Tema">
+          <button type="button" class="theme-btn" data-theme-val="light" title="Tema claro" aria-label="Tema claro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme-val="dark" title="Tema escuro" aria-label="Tema escuro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn active" data-theme-val="auto" title="Automático (segue o sistema)"
+            aria-label="Automático">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span class="theme-auto-label">Auto</span>
+          </button>
+        </div>
+
+        <a href="https://app.agentti.ia.br/?login=1" class="nav-login">Entrar</a>
+        <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container ajuda-pub">
+    <nav class="ajuda-trilha" aria-label="Você está em"><a href="/ajuda">Central de ajuda</a> › Estatísticas</nav>
+    <div class="ajuda-grade">
+      <article class="ajuda-artigo">
+        <h1>Estatísticas</h1>
+        <p class="ajuda-resumo">Prancha com os números de uma área (Receita, IBGE, renda e trabalho), dados no mapa, comparação com a cidade e imagens para o relatório.</p>
+        <h3 id="a-prancha">A prancha</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/estatisticas-claro.webp" alt="A prancha de estatísticas de uma área, com a área e o recorte à esquerda e as estatísticas prontas à direita" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/estatisticas-escuro.webp" alt="A prancha de estatísticas de uma área, com a área e o recorte à esquerda e as estatísticas prontas à direita" loading="lazy"><figcaption>A prancha de estatísticas de uma área, com a área e o recorte à esquerda e as estatísticas prontas à direita</figcaption></figure>
+<p>Em <strong>Resultados → <a href="https://app.agentti.ia.br/app/estatisticas">Estatísticas</a></strong> você monta uma prancha com os números de uma área do projeto. Não gasta cota.</p>
+<ol><li><strong>Área</strong>: escolha à esquerda uma das áreas do projeto (cidade, cidade com as vizinhas, bairro, raio ou forma desenhada). Para criar uma, use o mapa. No cartão da área, no mapa, o botão <strong>Estatísticas</strong> já abre aqui com ela.</li><li><strong>Recorte</strong>: as <strong>atividades do projeto</strong> (o padrão), <strong>todas</strong> ou <strong>escolher</strong> outras; e, se quiser, o porte e matriz ou filial. Em cidade grande, &quot;todas&quot; pode passar de 40 mil empresas: aí escolha atividades ou uma área menor.</li><li><strong>Estatísticas prontas</strong>: à direita. Clique para pôr ou tirar da prancha. Tem números da Receita (porte, faixa A/B/C, tempo de empresa ativa, contato, capital social, atividades, bairros), do IBGE (população, densidade, PIB per capita, economia da cidade, empresas por 10 mil habitantes), de <strong>renda e trabalho</strong> (<a href="/ajuda/renda-do-entorno">renda do entorno</a> das empresas, Pix recebido por empresas, declarantes do Imposto de Renda e automóveis por habitante, empregos com carteira e salário médio da cidade e do ramo), o mapa da área e o que já está no projeto.</li></ol>
+<p>O título da prancha pode ser editado (clique nele) e o bloco <strong>Nota</strong> recebe um texto seu. Passe o mouse num bloco para ver a barra dele: <strong>arraste pela alça</strong> (ou use as setas do teclado com a alça selecionada) para mudar a ordem, mude entre <strong>meia largura e largura toda</strong>, ou tire o bloco. O que você escolheu fica guardado neste navegador, por projeto. Cada bloco diz de onde vem o número, e o rodapé traz as fontes com o ano.</p>
+<h3 id="comparar">Comparar</h3>
+<p>Em <strong>Comparar com</strong> (à esquerda) escolha <strong>a cidade inteira</strong> onde a área fica ou <strong>outra área do projeto</strong>. Os dois lados usam o mesmo recorte. Em cada barra, a parte azul é esta área e o traço é a comparação; ao lado sai o <strong>índice</strong>: 100 = igual, 150 = uma vez e meia (▲), 50 = metade (▼). Os números principais e o capital social mostram o valor da comparação embaixo.</p>
+<ul><li>Comparar com a cidade mostra onde a área foge do normal da cidade: mais empresas grandes, mais novas, mais com celular. Quando a área já é a cidade inteira, a opção fica desligada.</li><li>Comparando com outra cidade, os dados da cidade (população, PIB, renda e trabalho) mostram as duas lado a lado.</li><li>Área pequena, com poucas empresas, dá índice que pula muito: olhe também a contagem.</li><li>A comparação vai junto quando você salva a prancha e na imagem do bloco.</li></ul>
+<h3 id="salvar-a-prancha">Salvar a prancha</h3>
+<p><strong>Salvar prancha</strong> (no alto) guarda no projeto a área, o recorte, os blocos e os <strong>números de hoje</strong>. As pranchas salvas ficam à esquerda, em <strong>Salvas neste projeto</strong>, e também na página <a href="https://app.agentti.ia.br/app/relatorios">Relatórios</a>.</p>
+<ul><li>Ao reabrir, a prancha mostra os números do dia em que foi salva, com o mês da base da Receita usada (por exemplo, &quot;base da Receita de 09/2026&quot;). Ela não muda sozinha: dá para comparar com o que mudou depois.</li><li><strong>Atualizar com a base de hoje</strong> refaz a conta com a mesma área e o mesmo recorte. Depois clique em <strong>Salvar alterações</strong> para guardar os números novos.</li><li>Mudar a ordem, o tamanho, os blocos, o título ou a nota também pede <strong>Salvar alterações</strong>.</li><li>A área fica guardada junto: a prancha abre mesmo que a área seja apagada ou ajustada no mapa. O recorte de uma prancha salva não muda; para outro recorte, escolha uma área à esquerda (sai da prancha salva) e salve outra.</li><li>Para apagar, use a lixeira ao lado do nome.</li><li>O <strong>Assistente</strong> vê as pranchas salvas do projeto. Peça, por exemplo, <em>&quot;faça o relatório de mercado da prancha Centro de Campinas&quot;</em>: o relatório usa a área, o recorte e os números do dia em que a prancha foi salva (com o mês da base da Receita no método) e, se ela compara, traz uma seção com a comparação e os índices.</li></ul>
+<h3 id="imagem-para-o-relatorio">Imagem para o relatório</h3>
+<ul><li><strong>Baixar imagem</strong> (no alto da prancha) baixa a prancha inteira em PNG; o botão de baixar na barra de um bloco baixa só aquele bloco, com a área e o recorte embaixo do título.</li><li><strong>Guardar para o relatório</strong> guarda a imagem no projeto. Depois peça ao <strong>Assistente</strong>: <em>&quot;faça o relatório de mercado com as imagens do projeto&quot;</em>.</li><li>A imagem sai sempre no tema claro, em alta resolução, pronta para Word e PDF, mesmo que a tela esteja no escuro.</li><li>Para o relatório, prefira guardar <strong>bloco por bloco</strong> (o mapa, o porte, a renda...): a prancha inteira cabe numa página, mas fica pequena para ler no papel.</li></ul>
+<p>&quot;Empresas por 10 mil habitantes&quot; só aparece quando a área é a cidade inteira: num bairro ou raio o IBGE não diz quantas pessoas moram dentro.</p>
+<h3 id="aba-mapa">Aba Mapa</h3>
+<figure class="ajuda-print"><img class="ajuda-print-claro" src="/assets/ajuda/estatisticas-mapa-claro.webp" alt="A aba Mapa com a cidade e as vizinhas pintadas pelo PIB per capita" loading="lazy"><img class="ajuda-print-escuro" src="/assets/ajuda/estatisticas-mapa-escuro.webp" alt="A aba Mapa com a cidade e as vizinhas pintadas pelo PIB per capita" loading="lazy"><figcaption>A aba Mapa com a cidade e as vizinhas pintadas pelo PIB per capita</figcaption></figure>
+<p>Na aba <strong>Mapa</strong>, a mesma área e o mesmo recorte da esquerda aparecem pintados no mapa. Escolha à direita o que mostrar:</p>
+<ul><li><strong>Concentração de empresas</strong>: as ruas com mais empresas do recorte ficam mais quentes. Em <strong>O que pesa</strong> você escolhe contar só a quantidade ou dar mais peso às empresas maiores (porte), ao capital social ou às matrizes. Leva alguns segundos para pintar. Os mapas de calor já salvos no projeto abrem pelo campo <strong>Ou abrir um mapa de calor salvo</strong>.</li><li><strong>Renda do entorno</strong>: cada setor do Censo 2022 pela <a href="/ajuda/renda-do-entorno">renda dos moradores</a>, comparada com a própria cidade.</li><li><strong>Dados da cidade e vizinhas</strong>: a cidade e as vizinhas pintadas por um número (população, densidade, PIB per capita, Pix recebido por empresas, declarantes do Imposto de Renda, automóveis, empregos com carteira ou salário médio), com o nome e o valor de cada uma. As cores dividem as cidades que aparecem em até cinco grupos.</li><li><strong>Só a área</strong>: o contorno sobre o mapa.</li></ul>
+<p><strong>Enquadrar a área</strong> volta o mapa para a área inteira. Em <strong>Imagem</strong>:</p>
+<ul><li><strong>Área inteira</strong>: a área encosta na borda da imagem, do tamanho que ela tem. <strong>Como na tela</strong>: sai o pedaço que você deixou no mapa, com o zoom que você deu.</li><li><strong>Fundo</strong>: claro (o padrão) ou escuro. O mapa da tela já mostra o fundo escolhido.</li><li><strong>Só a área, com fundo transparente</strong>: o PNG sai recortado no contorno da área, sem nada em volta, com o título e a legenda. Bom para pôr sobre outra imagem ou num slide.</li></ul>
+<p><strong>Baixar imagem</strong> e <strong>Guardar para o relatório</strong> funcionam como na prancha. A imagem leva o título (clique nele para mudar), a legenda e as fontes com o ano, numa faixa fora do mapa, sem cobrir a área.</p>
+        <aside class="ajuda-chamada">
+          <p><strong>Ainda não usa o Agentti?</strong>Teste grátis por 7 dias, sem cartão.</p>
+          <a href="https://app.agentti.ia.br/?register=1" class="btn btn-primary">Criar conta grátis</a>
+        </aside>
+      </article>
+      <nav class="ajuda-lateral" aria-label="Artigos da ajuda">
+        <h2>Artigos</h2>
+        <ul>
+<li><a href="/ajuda/primeiros-passos">Primeiros passos</a></li>
+<li><a href="/ajuda/buscar-empresas">Buscar empresas na base da Receita</a></li>
+<li><a href="/ajuda/mapa">Mapa</a></li>
+<li><a href="/ajuda/qualificar">Qualificar empresas</a></li>
+<li><a href="/ajuda/descoberta-na-web">Descoberta na web (Google Maps e Apple Maps)</a></li>
+<li><a href="/ajuda/chrome-do-agentti">Chrome do Agentti e extensão</a></li>
+<li><a href="/ajuda/importar-planilha">Importar planilha (clientes e leads)</a></li>
+<li><a href="/ajuda/leads">Leads (as empresas do projeto)</a></li>
+<li><a href="/ajuda/abordagem">Abordagem (mensagens)</a></li>
+<li><a href="/ajuda/relatorios">Relatórios, estatísticas e exportação</a></li>
+<li><a href="/ajuda/estatisticas" aria-current="page">Estatísticas</a></li>
+<li><a href="/ajuda/assistente">Assistente</a></li>
+<li><a href="/ajuda/cotas-e-limites">Cotas, limites e custos</a></li>
+<li><a href="/ajuda/app-do-celular">App do celular (radar)</a></li>
+<li><a href="/ajuda/configuracoes">Configurações</a></li>
+<li><a href="/ajuda/perguntas-frequentes">Perguntas frequentes</a></li>
+<li><a href="/ajuda/integracoes-api-e-webhooks">Integrações (API e webhooks)</a></li>
+<li><a href="/ajuda/renda-do-entorno">Renda do entorno</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand">
+            <div class="brand-icon">
+              <img src="/assets/logo.png" alt="Agentti">
+            </div>
+            <span>agentti</span>
+          </a>
+          <p class="footer-desc">Prospecção de empresas no mapa, com dados oficiais e contatos com prova.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Produto</h4>
+          <ul class="footer-links">
+            <li><a href="/#como-funciona" class="footer-link">Como funciona</a></li>
+            <li><a href="/#recursos" class="footer-link">Recursos</a></li>
+            <li><a href="/#planos" class="footer-link">Planos</a></li>
+            <li><a href="/#duvidas" class="footer-link">Dúvidas</a></li>
+            <li><a href="/ajuda" class="footer-link">Central de ajuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Acesso</h4>
+          <ul class="footer-links">
+            <li><a href="https://app.agentti.ia.br/?login=1" class="footer-link">Entrar</a></li>
+            <li><a href="https://app.agentti.ia.br/?register=1" class="footer-link">Criar conta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contato@agentti.ia.br" class="footer-link">contato@agentti.ia.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agentti Tecnologia da Informação. Todos os direitos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/landing.js"></script>
+</body>
+
+</html>
