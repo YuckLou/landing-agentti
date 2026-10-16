@@ -1673,4 +1673,11 @@ button {
 @media (max-width: 640px) {
   .showcase-sound { right: 10px; bottom: 10px; padding: 8px; }
   .showcase-sound-label { display: none; }
+  /* Celular: vídeo vertical; a telinha estreita para o vídeo caber em ~78% da altura da tela */
+  .showcase-video { aspect-ratio: 9 / 16; }
+  .showcase-video video { object-fit: contain; }
+  .showcase-wrapper {
+    max-width: calc(78vh * 9 / 16 + 18px);
+    max-width: calc(78svh * 9 / 16 + 18px);
+  }
 }

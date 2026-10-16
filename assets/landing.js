@@ -258,6 +258,8 @@ function initThemeEngine() {
 }
 
 // Vídeo da telinha: começa sem som; o botão liga e desliga. Quem pede menos movimento vê o vídeo parado.
+// Em tela estreita (até 640 px) toca o vídeo vertical; o <source media> escolhe o arquivo, aqui só o poster
+// e a troca quando a largura muda com a página aberta.
 (function () {
   const video = document.getElementById('showcase-video');
   const btn = document.getElementById('showcase-sound');
@@ -265,6 +267,19 @@ function initThemeEngine() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     video.removeAttribute('autoplay');
     video.pause();
+  }
+  const estreita = window.matchMedia ? window.matchMedia('(max-width: 640px)') : null;
+  const porLargura = function () {
+    video.poster = estreita && estreita.matches ? video.dataset.posterVertical : video.dataset.poster;
+  };
+  porLargura();
+  if (estreita && estreita.addEventListener) {
+    estreita.addEventListener('change', function () {
+      const tocando = !video.paused;
+      porLargura();
+      video.load();
+      if (tocando) video.play().catch(function () {});
+    });
   }
   btn.addEventListener('click', function () {
     const ligar = video.muted;
