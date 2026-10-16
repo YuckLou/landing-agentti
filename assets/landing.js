@@ -256,3 +256,22 @@ function initThemeEngine() {
     }
   }
 }
+
+// Vídeo da telinha: começa sem som; o botão liga e desliga. Quem pede menos movimento vê o vídeo parado.
+(function () {
+  const video = document.getElementById('showcase-video');
+  const btn = document.getElementById('showcase-sound');
+  if (!video || !btn) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.removeAttribute('autoplay');
+    video.pause();
+  }
+  btn.addEventListener('click', function () {
+    const ligar = video.muted;
+    video.muted = !ligar;
+    if (ligar && video.paused) video.play().catch(function () {});
+    btn.setAttribute('aria-pressed', String(ligar));
+    btn.setAttribute('aria-label', ligar ? 'Desligar o som' : 'Ligar o som');
+    btn.querySelector('.showcase-sound-label').textContent = ligar ? 'Desligar o som' : 'Ligar o som';
+  });
+})();
