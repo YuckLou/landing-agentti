@@ -289,4 +289,34 @@ function initThemeEngine() {
     btn.setAttribute('aria-label', ligar ? 'Desligar o som' : 'Ligar o som');
     btn.querySelector('.showcase-sound-label').textContent = ligar ? 'Desligar o som' : 'Ligar o som';
   });
+
+  // Tela cheia: a moldura inteira (vídeo + botões). iPhone não deixa um div ir para tela cheia,
+  // só o próprio vídeo, no player do sistema (webkitEnterFullscreen).
+  const full = document.getElementById('showcase-full');
+  const moldura = video.closest('.showcase-video');
+  if (!full || !moldura) return;
+  const fsEl = function () { return document.fullscreenElement || document.webkitFullscreenElement; };
+  const podeDiv = moldura.requestFullscreen || moldura.webkitRequestFullscreen;
+  if (!podeDiv && !video.webkitEnterFullscreen) { full.hidden = true; return; }
+  const alternar = function () {
+    if (fsEl()) {
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } else if (podeDiv) {
+      const p = podeDiv.call(moldura);
+      if (p && p.catch) p.catch(function () {});   // navegador embutido que proíbe tela cheia: só não abre
+      if (video.paused) video.play().catch(function () {});
+    } else {
+      video.webkitEnterFullscreen();
+    }
+  };
+  const marcar = function () {
+    const dentro = fsEl() === moldura;
+    full.setAttribute('aria-pressed', String(dentro));
+    full.setAttribute('aria-label', dentro ? 'Sair da tela cheia' : 'Tela cheia');
+    full.title = dentro ? 'Sair da tela cheia' : 'Tela cheia';
+  };
+  full.addEventListener('click', alternar);
+  video.addEventListener('dblclick', alternar);
+  document.addEventListener('fullscreenchange', marcar);
+  document.addEventListener('webkitfullscreenchange', marcar);
 })();
