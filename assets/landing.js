@@ -296,17 +296,24 @@ function initThemeEngine() {
   const moldura = video.closest('.showcase-video');
   if (!full || !moldura) return;
   const fsEl = function () { return document.fullscreenElement || document.webkitFullscreenElement; };
-  const podeDiv = moldura.requestFullscreen || moldura.webkitRequestFullscreen;
-  if (!podeDiv && !video.webkitEnterFullscreen) { full.hidden = true; return; }
+  // iPhone expõe o método no elemento mas não deixa usar: vale o que document.*FullscreenEnabled diz
+  const podeDiv = (document.fullscreenEnabled || document.webkitFullscreenEnabled) &&
+    (moldura.requestFullscreen || moldura.webkitRequestFullscreen);
+  const nativo = function () {   // player do sistema (iPhone) ou o vídeo sozinho em tela cheia
+    if (video.webkitEnterFullscreen) { try { video.webkitEnterFullscreen(); return; } catch (e) { /* segue */ } }
+    const f = video.requestFullscreen || video.webkitRequestFullscreen;
+    if (f) { const p = f.call(video); if (p && p.catch) p.catch(function () {}); }
+  };
+  if (!podeDiv && !video.webkitEnterFullscreen && !video.requestFullscreen) { full.hidden = true; return; }
   const alternar = function () {
+    if (video.paused) video.play().catch(function () {});
     if (fsEl()) {
       (document.exitFullscreen || document.webkitExitFullscreen).call(document);
     } else if (podeDiv) {
       const p = podeDiv.call(moldura);
-      if (p && p.catch) p.catch(function () {});   // navegador embutido que proíbe tela cheia: só não abre
-      if (video.paused) video.play().catch(function () {});
+      if (p && p.catch) p.catch(nativo);   // recusou (navegador embutido etc.): tenta o vídeo sozinho
     } else {
-      video.webkitEnterFullscreen();
+      nativo();
     }
   };
   const marcar = function () {
